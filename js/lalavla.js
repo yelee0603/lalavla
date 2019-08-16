@@ -251,10 +251,10 @@ $(function(){
         else if($(window).width()>767){
             $('.top-area .menu-btn').addClass('pc')
             $('.top-area .menu-btn').removeClass('mo')
-            // $('.depth1 a').click(function(){
-            //     $('.sub').removeClass('active');
-            //     $(this).next().addClass('active');
-            // })        
+            $('.depth1 a').click(function(){
+                $('.sub').removeClass('active');
+                $(this).next().addClass('active');
+            })        
             //pc용
             $('.menu-btn.pc').click(function(){
                 $('.menu-pc').show();//피시 메뉴
