@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=82959819e990c0e4fde8e9b43cf67ed8"></script>
     <script src="js/lalavla.js"></script>
 </head>
 <body>
@@ -2535,43 +2536,7 @@
                         <button type="submit"><i class="icon icon-search"></i></button>
                     </form>
                     <!-- 지도 -->
-                    <div id="map" style="height:350px;"></div>
-                    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=2c24799a1f5a3b5ba05b6900a739fe79"></script>
-                    <script>
-                        window.onload=function(){
-                       
-                        var mapContainer = document.getElementById('map'),
-                            mapOption = { 
-                                center: new kakao.maps.LatLng(37.558262, 126.937061),
-                                level: 3
-                            };
-
-                        var map = new kakao.maps.Map(mapContainer, mapOption);
-                        
-                        // 마커를 표시할 위치입니다 
-                        var position =  new kakao.maps.LatLng(37.558262, 126.937061);
-
-                        // 마커를 생성합니다
-                        var marker = new kakao.maps.Marker({
-                            position: position,
-                            clickable: true
-                        });
-
-                        marker.setMap(map);
-                        
-                        var iwContent = '<div style="padding:3px;">랄라블라 신촌대로점</div>', 
-                            iwRemoveable = true;
-
-                        var infowindow = new kakao.maps.InfoWindow({
-                            content : iwContent,
-                            removable : iwRemoveable
-                        });
-
-                        kakao.maps.event.addListener(marker, 'click', function() {
-                            infowindow.open(map, marker);  
-                        });
-                    }
-                    </script>
+                    <div id="map" style="height:350px;"></div>                  
                 </div>
             </div>
         </article>                 
