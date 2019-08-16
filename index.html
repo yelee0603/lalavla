@@ -1,0 +1,2731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lalavla</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link rel="stylesheet" href="css/lalavla.css">
+    <link rel="stylesheet" href="css/lalavla-mo.css" media="(max-width:767px)">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="js/lalavla.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="top-area">
+            <div class="center">
+                <h1 class="icon icon-logo"><a href="#"><span class="blind">랄라블라</span></a></h1>        
+                <button class="icon icon-menu menu-btn"><span class="blind">메뉴</span></button>
+
+                <div class="search">
+                    <form action="#">
+                        <input type="text" placeholder="검색어를 입력하세요.">
+                        <button type="submit" class="icon icon-search" id="add"><span class="blind">검색</span></button>
+                    </form>
+                </div>
+                <div class="search-tab">
+                    <div class="search-nav">
+                        <a href="#keyword" class="active">최근검색어</a>
+                        <a href="#popword">인기검색어</a>
+                    </div>
+                    <button class="icon icon-del-big btn-del"></button>
+                    <div class="search-contents">
+                        <div class="keyword content" id="keyword">
+                            <ul>
+                                <li><a href="#">립밤</a><button class="icon icon-del"></button></li>
+                                <li><a href="#">틴트</a><button class="icon icon-del"></button></li>
+                                <li><a href="#">아이브로우</a><button class="icon icon-del"></button></li>
+                            </ul>
+                            <button class="del-all">전체삭제</button>
+                            <!-- 리스트의 수가 0이되면 아래의 메세지를 동적생성 -->
+                            <!-- <p>최근검색어가 없습니다.</p> -->
+                        </div>
+                        <div class="popword content" id="popword">
+                            <ul>
+                                <li><a href="#"><span>1</span>삐아</a></li>
+                                <li><a href="#"><span>2</span>이글립스</a></li>
+                                <li><a href="#"><span>3</span>페리페라</a></li>
+                                <li><a href="#"><span>4</span>쿠션</a></li>
+                                <li><a href="#"><span>5</span>틴트</a></li>
+                                <li><a href="#"><span>6</span>롬앤</a></li>
+                                <li><a href="#"><span>7</span>문샷</a></li>
+                                <li><a href="#"><span>8</span>클리오</a></li>
+                                <li><a href="#"><span>9</span>컨실러</a></li>
+                                <li><a href="#"><span>10</span>독도</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- pc전용 -->
+                <div class="btn-group">
+                    <button id="btn-user" class="icon icon-user"><span class="blind">사용자</span></button>
+                    <button id="btn-cart" class="icon icon-cart"><span class="blind">카트</span></button>
+                    <button id="btn-like" class="icon icon-like"><span class="blind">찜</span></button>
+                </div>                    
+            </div>
+        </div>
+        
+        <div class="nav-gnb">
+            <div class="swiper-container gnb">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide"><a href="#">BEST</a></li>
+                    <li class="swiper-slide"><a href="#">NEW</a></li>
+                    <li class="swiper-slide"><a href="#">SALE</a></li>
+                    <li class="swiper-slide"><a href="#">BRAND</a></li>
+                    <li class="swiper-slide"><a href="#">EVENT</a></li>
+                </ul>
+            </div>
+        </div>
+                                           
+        <nav class="category">
+            <!-- 모바일전용 -->
+            <div class="menu-popup">
+                <button class="icon icon-del-big btn-del"></button>
+                <div class="menu-contents">
+                    <div class="user-info">
+                        <span class="log-out">로그인하세요.</span>
+                        <span class="log-in">OOO님 어서오세요!</span>
+                    </div>
+                    <div class="top-nav">
+                        <div class="my-page">
+                            <a href="#" class="LI">로그인</a>
+                            <a href="#" class="MP">마이페이지</a>
+                        </div>
+                        <div class="cs">
+                            <a href="#">고객센터</a>
+                        </div>
+                    </div>
+                    <div class="menu center">
+                        <ul class="depth1">
+                            <li class='group'>
+                                <div class="title">
+                                    <a href="#">스킨케어</a>
+                                    <button class="icon icon-down drop-down"></button>
+                                </div>
+                                <ul class="sub">
+                                    <li><a href="#">전체상품</a></li>
+                                    <li><a href="#">스킨/토너</a></li>
+                                    <li><a href="#">에센스/세럼</a></li>
+                                    <li><a href="#">로션/에멀젼</a></li>
+                                    <li><a href="#">크림/오일</a></li>
+                                    <li><a href="#">아이케어</a></li>
+                                    <li><a href="#">트러블케어</a></li>
+                                    <li><a href="#">마스크팩/패치</a></li>
+                                    <li><a href="#">필링/패드류</a></li>
+                                    <li><a href="#">클렌징</a></li>
+                                </ul>
+                            </li>
+                            <li class='group'>
+                                <div class="title">
+                                    <a href="#">메이크업</a>
+                                    <button class="icon icon-down drop-down"></button>
+                                </div>
+                                <ul class="sub">
+                                    <li><a href="#">전체상품</a></li>
+                                    <li><a href="#">베이스</a></li>
+                                    <li><a href="#">아이</a></li>
+                                    <li><a href="#">치크</a></li>
+                                    <li><a href="#">립</a></li>
+                                    <li><a href="#">네일</a></li>
+                                    <li><a href="#">메이크업툴</a></li>
+                                </ul>
+                            </li>
+                            <li class='group'>
+                                <div class="title">
+                                    <a href="#">헤어케어</a>
+                                    <button class="icon icon-down drop-down"></button>
+                                </div>
+                                <ul class="sub">
+                                    <li><a href="#">전체상품</a></li>
+                                    <li><a href="#">샴푸/컨디셔너</a></li>
+                                    <li><a href="#">트리트먼트/팩</a></li>
+                                    <li><a href="#">헤어에센스</a></li>
+                                    <li><a href="#">스타일링</a></li>
+                                    <li><a href="#">헤어컬러</a></li>
+                                    <li><a href="#">헤어기기/브러쉬</a></li>
+                                </ul>
+                            </li>
+                            <li class='group'>
+                                <div class="title">
+                                    <a href="#">바디케어</a>
+                                    <button class="icon icon-down drop-down"></button>
+                                </div>
+                                <ul class="sub">
+                                    <li><a href="#">전체상품</a></li>
+                                    <li><a href="#">클렌져/스크럽</a></li>
+                                    <li><a href="#">로션/크림</a></li>
+                                    <li><a href="#">스파</a></li>
+                                    <li><a href="#">오일/미스트</a></li>
+                                    <li><a href="#">립케어</a></li>
+                                    <li><a href="#">핸드케어</a></li>
+                                    <li><a href="#">풋케어</a></li>
+                                    <li><a href="#">제모/데오드란트</a></li>
+                                </ul>
+                            </li>
+                            <li class='group'>
+                                <div class="title">
+                                    <a href="#">프래그런스</a>
+                                    <button class="icon icon-down drop-down"></button>
+                                </div>
+                                <ul class="sub">
+                                    <li><a href="#">전체상품</a></li>
+                                    <li><a href="#">여성향수</a></li>
+                                    <li><a href="#">남성향수</a></li>
+                                    <li><a href="#">바디미스트</a></li>
+                                    <li><a href="#">디퓨저/캔들</a></li>
+                                    <li><a href="#">섬유향수</a></li>
+                                    <li><a href="#">기타 방향/제습제</a></li>
+                                </ul>
+                            </li>
+                            <li class='group'>
+                                <div class="title">
+                                    <a href="#">Man</a>
+                                    <button class="icon icon-down drop-down"></button>
+                                </div>
+                                <ul class="sub">
+                                    <li><a href="#">전체상품</a></li>
+                                    <li><a href="#">페이셜케어</a></li>
+                                    <li><a href="#">쉐이빙/면도기</a></li>
+                                    <li><a href="#">헤어/스타일링</a></li>
+                                    <li><a href="#">썬/메이크업</a></li>
+                                </ul>
+                            </li>
+                            <li class='group'>
+                                <div class="title">
+                                    <a href="#">living</a>
+                                    <button class="icon icon-down drop-down"></button>
+                                </div>
+                                <ul class="sub">
+                                    <li><a href="#">전체상품</a></li>
+                                    <li><a href="#">제지/화장솜</a></li>
+                                    <li><a href="#">미용소품</a></li>
+                                    <li><a href="#">세탁/청소용품</a></li>
+                                    <li><a href="#">욕실용품</a></li>
+                                    <li><a href="#">차량용품</a></li>
+                                    <li><a href="#">계절용품</a></li>
+                                </ul>
+                            </li>
+                            <li class='group'>
+                                <div class="title">
+                                    <a href="#">Food</a>
+                                    <button class="icon icon-down drop-down"></button>
+                                </div>
+                                <ul class="sub">
+                                    <li><a href="#">전체상품</a></li>
+                                    <li><a href="#">스낵</a></li>
+                                    <li><a href="#">초콜릿/견과류</a></li>
+                                    <li><a href="#">젤리/캔디</a></li>
+                                    <li><a href="#">음료</a></li>
+                                    <li><a href="#">커피/차</a></li>
+                                    <li><a href="#">체중관리식품</a></li>
+                                </ul>
+                            </li>
+                            <li class='group'>
+                                <div class="title">
+                                    <a href="#">Health</a>
+                                    <button class="icon icon-down drop-down"></button>
+                                </div>
+                                <ul class="sub">
+                                    <li><a href="#">전체상품</a></li>
+                                    <li><a href="#">건강/위생용품</a></li>
+                                    <li><a href="#">마사지/교정</a></li>
+                                    <li><a href="#">헬스용품</a></li>
+                                    <li><a href="#">아이케어</a></li>
+                                    <li><a href="#">덴탈케어</a></li>
+                                    <li><a href="#">여성용품</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-pc">
+                <div class="menu center">
+                    <ul class="depth1">
+                        <li class='group'>
+                            <a href="#">스킨케어 <i class="icon icon-down"></i></a>
+                            <ul class="sub">
+                                <li><a href="#">전체상품</a></li>
+                                <li><a href="#">스킨/토너</a></li>
+                                <li><a href="#">에센스/세럼</a></li>
+                                <li><a href="#">로션/에멀젼</a></li>
+                                <li><a href="#">크림/오일</a></li>
+                                <li><a href="#">아이케어</a></li>
+                                <li><a href="#">트러블케어</a></li>
+                                <li><a href="#">마스크팩/패치</a></li>
+                                <li><a href="#">필링/패드류</a></li>
+                                <li><a href="#">클렌징</a></li>
+                            </ul>
+                        </li>
+                        <li class='group'>
+                            <a href="#">메이크업</a>
+                            <ul class="sub">
+                                <li><a href="#">전체상품</a></li>
+                                <li><a href="#">베이스</a></li>
+                                <li><a href="#">아이</a></li>
+                                <li><a href="#">치크</a></li>
+                                <li><a href="#">립</a></li>
+                                <li><a href="#">네일</a></li>
+                                <li><a href="#">메이크업툴</a></li>
+                            </ul>
+                        </li>
+                        <li class='group'>
+                            <a href="#">헤어케어</a>
+                            <ul class="sub">
+                                <li><a href="#">전체상품</a></li>
+                                <li><a href="#">샴푸/컨디셔너</a></li>
+                                <li><a href="#">트리트먼트/팩</a></li>
+                                <li><a href="#">헤어에센스</a></li>
+                                <li><a href="#">스타일링</a></li>
+                                <li><a href="#">헤어컬러</a></li>
+                                <li><a href="#">헤어기기/브러쉬</a></li>
+                            </ul>
+                        </li>
+                        <li class='group'>
+                            <a href="#">바디케어</a>
+                            <ul class="sub">
+                                <li><a href="#">전체상품</a></li>
+                                <li><a href="#">클렌져/스크럽</a></li>
+                                <li><a href="#">로션/크림</a></li>
+                                <li><a href="#">스파</a></li>
+                                <li><a href="#">오일/미스트</a></li>
+                                <li><a href="#">립케어</a></li>
+                                <li><a href="#">핸드케어</a></li>
+                                <li><a href="#">풋케어</a></li>
+                                <li><a href="#">제모/데오드란트</a></li>
+                            </ul>
+                        </li>
+                        <li class='group'>
+                            <a href="#">프래그런스</a>
+                            <ul class="sub">
+                                <li><a href="#">전체상품</a></li>
+                                <li><a href="#">여성향수</a></li>
+                                <li><a href="#">남성향수</a></li>
+                                <li><a href="#">바디미스트</a></li>
+                                <li><a href="#">디퓨저/캔들</a></li>
+                                <li><a href="#">섬유향수</a></li>
+                                <li><a href="#">기타 방향/제습제</a></li>
+                            </ul>
+                        </li>
+                        <li class='group'>
+                            <a href="#">Man</a>
+                            <ul class="sub">
+                                <li><a href="#">전체상품</a></li>
+                                <li><a href="#">페이셜케어</a></li>
+                                <li><a href="#">쉐이빙/면도기</a></li>
+                                <li><a href="#">헤어/스타일링</a></li>
+                                <li><a href="#">썬/메이크업</a></li>
+                            </ul>
+                        </li>
+                        <li class='group'>
+                            <a href="#">living</a>
+                            <ul class="sub">
+                                <li><a href="#">전체상품</a></li>
+                                <li><a href="#">제지/화장솜</a></li>
+                                <li><a href="#">미용소품</a></li>
+                                <li><a href="#">세탁/청소용품</a></li>
+                                <li><a href="#">욕실용품</a></li>
+                                <li><a href="#">차량용품</a></li>
+                                <li><a href="#">계절용품</a></li>
+                            </ul>
+                        </li>
+                        <li class='group'>
+                            <a href="#">Food</a>
+                            <ul class="sub">
+                                <li><a href="#">전체상품</a></li>
+                                <li><a href="#">스낵</a></li>
+                                <li><a href="#">초콜릿/견과류</a></li>
+                                <li><a href="#">젤리/캔디</a></li>
+                                <li><a href="#">음료</a></li>
+                                <li><a href="#">커피/차</a></li>
+                                <li><a href="#">체중관리식품</a></li>
+                            </ul>
+                        </li>
+                        <li class='group'>
+                            <a href="#">Health</a>
+                            <ul class="sub">
+                                <li><a href="#">전체상품</a></li>
+                                <li><a href="#">건강/위생용품</a></li>
+                                <li><a href="#">마사지/교정</a></li>
+                                <li><a href="#">헬스용품</a></li>
+                                <li><a href="#">아이케어</a></li>
+                                <li><a href="#">덴탈케어</a></li>
+                                <li><a href="#">여성용품</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- /.menu -->
+        </nav>                
+    </header>
+    <!-- /header -->    
+
+    <!-- aside -->
+    <aside class="quick-menu">
+        <div class="tab-nav">
+            <div class="color-box"></div>
+            <button class="icon icon-quick-cart click" id="quick-cart"><span class="blind">장바구니</span></button>
+            <button class="icon icon-quick-like click" id="quick-like"><span class="blind">찜</span></button>
+            <button class="icon icon-quick-go-top" id="go-top"></button>
+        </div>
+        <div class="quick-menu-all">
+            <button class="icon icon-delW all-del"></button>
+            <button class="icon icon-fold fold"></button>
+            <ul class="quick-menu-nav">
+                <li><a href="#cart" class="cart-nav active"><i class="icon icon-hover-cart"></i></a></li>
+                <li><a href="#like" class="like-nav"><i class="icon icon-hover-like"></i></a></li>
+            </ul>
+
+            <div class="tab-contents">
+                <div id="cart" class="content">
+                    <div class="top">
+                        <label><input type="checkbox" name="cart">전체선택</label>
+                    </div>
+                    <ul>
+                        <!-- <li>
+                            <label><input type="checkbox"></label>
+                            <img src="img/best_product1.jpg" alt="">
+                            <dl>
+                                <dt>[프라도어]</dt>
+                                <dd>프라도어 바디 오드뚜왈렛 02 100ml</dd>
+                                <dd><small><del>50,000원</del></small> 29,500원</dd>                        
+                            </dl>
+                            <div class="count">
+                                <button class="icon icon-minus"></button>
+                                <span class=button>1</span>
+                                <button class="icon icon-plus"></button>
+                            </div>
+                        </li>
+                         -->
+                    </ul>
+                    <div class="bottom">
+                        <button class="btn-del">선택삭제</button>
+                        <button>주문하기</button>
+                    </div>
+                </div>
+                <div id="like" class="content">
+                    <ul>
+                        <!-- <li>
+                            <img src="img/best_product1.jpg" alt="">
+                            <i class="icon icon-del"></i>
+                            <dl>
+                                <dt>[프라도어]</dt>
+                                <dd>프라도어 바디 오드뚜왈렛 02 100ml</dd>
+                            </dl>
+                        </li> -->
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </aside>
+
+    <!-- /aside -->
+
+    <!-- section -->
+    <section>
+        <h2 class="blind">컨텐츠</h2>
+        <!-- 메인광고 -->
+        <article class="main-ad">
+            <h3 class="blind">메인광고</h3>
+                <div class="slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="img/slide1.jpg" alt="독도클렌져 득템 기회까지!">
+                                <img src="img/slide1_mo.jpg" alt="독도클렌져 득템 기회까지!">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="img/slide2.jpg" alt="판타지아 50% 온라인 단독할인">
+                                <img src="img/slide2_mo.jpg" alt="판타지아 50% 온라인 단독할인">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="img/slide3.jpg" alt="쿨~한 여름을 위한 썸머">
+                                <img src="img/slide3_mo.jpg" alt="쿨~한 여름을 위한 썸머">
+                            </a>
+                        </div>                
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <button id="playStop"><i class="icon icon-stop"></i> <span class="blind">정지</span></button>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"><i class="icon icon-next"></i></div>
+                    <div class="swiper-button-prev"><i class="icon icon-prev"></i></div>                
+                </div>
+            </div>
+        </article>
+
+        <!-- BEST -->
+        <article class="best center">
+            <h3>BEST</h3>
+            <div class="nav-tab">
+                <div class="swiper-container tab-menu">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><a href="#all" class="active">전체</a></li>
+                        <li class="swiper-slide"><a href="#skin">스킨케어</a></li>
+                        <li class="swiper-slide"><a href="#makeup">메이크업</a></li>
+                        <li class="swiper-slide"><a href="#body">헤어/바디</a></li>
+                        <li class="swiper-slide"><a href="#fragrance">프래그런스</a></li>
+                        <li class="swiper-slide"><a href="#man">남성</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contents">                
+                <ul id="all" class="active">
+                    <li class="item fragrance" data-key="product1">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product1.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[프라도어]</dt>
+                                    <dd class="name">프라도어 바디 오드뚜왈렛 02 100ml</dd>
+                                    <dd class="price"><small><del>50,000원</del></small> 29,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>       
+                            <label class="sale-label">41%</label>       
+                        </div>
+                    </li>
+                    <li class="item skin" data-key="product2">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product2.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[리더스]</dt>
+                                    <dd class="name">리더스코스메틱 아미노AC 프리마스크</dd>
+                                    <dd class="price"><small><del>2,000원</del></small> 1,000원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank2"><span class="blind">2위</span></label>       
+                            <label class="sale-label">50%</label>   
+                        </div>
+                    </li>
+                    <li class="item skin" data-key="product3">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product3.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[마데카21]</dt>
+                                    <dd class="name">마데카21 테카솔 마스크시트 30매입</dd>
+                                    <dd class="price"><small><del>27,000원</del></small> 13,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank3"><span class="blind">3위</span></label>       
+                            <label class="sale-label">27%</label>   
+                        </div>
+                    </li>
+                    <li class="item skin" data-key="product4">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product4.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[랩노]</dt>
+                                    <dd class="name">랩노 시칼로에 릴리프 선밀크</dd>
+                                    <dd class="price"><small><del>24,000원</del></small> 19,200원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank4"><span class="blind">4위</span></label>       
+                            <label class="sale-label">20%</label>   
+                        </div>
+                    </li>
+                    <li class="item makeup" data-key="product5">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product5.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[쏘내추럴]</dt>
+                                    <dd class="name">쏘내추럴 메이크업 세팅픽서 75ml</dd>
+                                    <dd class="price"><small><del>18,000원</del></small> 11,700원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank5"><span class="blind">5위</span></label>       
+                            <label class="sale-label">35%</label>   
+                        </div>
+                    </li>
+                    <li class="item makeup" data-key="product6">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product6.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[삐아]</dt>
+                                    <dd class="name">삐아 라스트 아이브로우 펜슬</dd>
+                                    <dd class="price">4,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank6"><span class="blind">6위</span></label>       
+                            <label class="sale-label">50%</label>   
+                        </div>
+                    </li>
+                    <li class="item body" data-key="product7">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product7.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[아로마티카]</dt>
+                                    <dd class="name">아로마티카 유기농 알로에베라 젤 30ml</dd>
+                                    <dd class="price"><small><del>9,800원</del></small> 8,800원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank7"><span class="blind">7위</span></label>       
+                            <label class="sale-label">50%</label>   
+                        </div>
+                    </li>
+                    <li class="item body" data-key="product8">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product8.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[어헤즈]</dt>
+                                    <dd class="name">어헤즈 프리미엄 히든테라피 샴푸 430ml</dd>                                        
+                                    <dd class="price"><small><del>43,000원</del></small> 23,600원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank8"><span class="blind">8위</span></label>       
+                            <label class="sale-label">45%</label>   
+                        </div>
+                    </li>
+                </ul>
+                <ul id="skin">
+                    <li class="item skin" data-key="product2">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product2.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[리더스]</dt>
+                                    <dd class="name">리더스코스메틱 아미노AC 프리마스크</dd>
+                                    <dd class="price"><small><del>2,000원</del></small> 1,000원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>       
+                            <label class="sale-label">50%</label>   
+                        </div>
+                    </li>
+                    <li class="item skin" data-key="product3">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product3.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[마데카21]</dt>
+                                    <dd class="name">마데카21 테카솔 마스크시트 30매입</dd>
+                                    <dd class="price"><small><del>27,000원</del></small> 13,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank2"><span class="blind">2위</span></label>       
+                            <label class="sale-label">27%</label>   
+                        </div>
+                    </li>
+                    <li class="item skin" data-key="product4">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product4.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[랩노]</dt>
+                                    <dd class="name">랩노 시칼로에 릴리프 선밀크</dd>
+                                    <dd class="price"><small><del>24,000원</del></small> 19,200원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank3"><span class="blind">3위</span></label>       
+                            <label class="sale-label">20%</label>   
+                        </div>
+                    </li>
+                    <li class="item skin" data-key="product9">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_skin1.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[벨라몬스터]</dt>
+                                    <dd class="name">당근 패드 BIG 기획 세트</dd>
+                                    <dd class="price">28,900원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank4"><span class="blind">4위</span></label>
+                            <label class="none-label"></label>   
+                        </div>
+                    </li>
+                    <li class="item skin" data-key="product10">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_skin2.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[헤이네이처]</dt>
+                                    <dd class="name">어성초 스킨 모이스처라이저 120ml</dd>
+                                    <dd class="price">20,700원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank5"><span class="blind">5위</span></label>
+                            <label class="none-label"></label>     
+                        </div>
+                    </li>
+                    <li class="item skin" data-key="product11">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_body3.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[메디큐브]</dt>
+                                    <dd class="name">레드 세럼 30ml</dd>
+                                    <dd class="price">29,900원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank6"><span class="blind">6위</span></label>
+                            <label class="none-label"></label>    
+                        </div>
+                    </li>
+                    <li class="item skin" data-key="product12">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_skin4.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[배드스킨]</dt>
+                                    <dd class="name">콜라겐 밤 하이드레이팅 앰플 400ml</dd>
+                                    <dd class="price">13,900원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank7"><span class="blind">7위</span></label>
+                            <label class="none-label"></label>  
+                        </div>
+                    </li>
+                    <li class="item skin" data-key="product13">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_skin5.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[피지오겔]</dt>
+                                    <dd class="name">DMT 페이셜 로션 200ml</dd>
+                                    <dd class="price">19,200원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank8"><span class="blind">8위</span></label>
+                            <label class="none-label"></label>  
+                        </div>
+                    </li>
+                </ul>
+                <ul id="makeup">
+                    <li class="item makeup" data-key="product5">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product5.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[쏘내추럴]</dt>
+                                    <dd class="name">쏘내추럴 메이크업 세팅픽서 75ml</dd>
+                                    <dd class="price"><small><del>18,000원</del></small> 11,700원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank5"><span class="blind">5위</span></label>       
+                            <label class="sale-label">35%</label>   
+                        </div>
+                    </li>
+                    <li class="item makeup" data-key="product6">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product6.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[삐아]</dt>
+                                    <dd class="name">삐아 라스트 아이브로우 펜슬</dd>
+                                    <dd class="price">4,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank6"><span class="blind">6위</span></label>       
+                            <label class="sale-label">50%</label>   
+                        </div>
+                    </li>
+                    <li class="item makeup" data-key="product14">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_makeup1.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[롬앤]</dt>
+                                    <dd class="name">배러댄아이즈</dd>
+                                    <dd class="price">16,000원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank5"><span class="blind">5위</span></label>
+                            <label class="none-label"></label>    
+                        </div>
+                    </li>
+                    <li class="item makeup" data-key="product15">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_makeup2.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[클리오]</dt>
+                                    <dd class="name">킬커버 광채쿠션 기획세트</dd>
+                                    <dd class="price">32,000원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank6"><span class="blind">6위</span></label>
+                            <label class="none-label"></label>     
+                        </div>
+                    </li>
+                    <li class="item makeup" data-key="product16">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_makeup3.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[웨이크메이크]</dt>
+                                    <dd class="name">수분톡틴트</dd>
+                                    <dd class="price">12,000원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank5"><span class="blind">5위</span></label>
+                            <label class="none-label"></label>  
+                        </div>
+                    </li>
+                    <li class="item makeup" data-key="product17">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_makeup4.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[3CE]</dt>
+                                    <dd class="name">무드레시피 멀티 아이 컬러 팔레트 8.1g</dd>
+                                    <dd class="price">38,000원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank6"><span class="blind">6위</span></label>
+                            <label class="none-label"></label>    
+                        </div>
+                    </li>
+                    <li class="item makeup" data-key="product18">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_makeup5.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[클리오]</dt>
+                                    <dd class="name">킬브로우오토하드브로우펜슬</dd>
+                                    <dd class="price">20,000원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank5"><span class="blind">5위</span></label>
+                            <label class="none-label"></label>         
+                        </div>
+                    </li>
+                    <li class="item makeup" data-key="product19">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_makeup6.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[릴리바이레드]</dt>
+                                    <dd class="name">스태리아이즈 나인투나인 젤라이너</dd>
+                                    <dd class="price">8,000원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank6"><span class="blind">6위</span></label>
+                            <label class="none-label"></label>  
+                        </div>
+                    </li>
+                </ul>
+                <ul id="body">
+                    <li class="item body" data-key="product7">
+                            <div class="wrap">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="img/best_product7.jpg" alt="">
+                                        <div class="hover">
+                                            <button class="icon icon-hover-cart"></button>
+                                            <button class="icon icon-hover-like"></button>
+                                            <div>
+                                                <i class="icon icon-review"></i>
+                                                <span class="count">1</span>
+                                            </div>
+                                        </div>
+                                        <div class="sold-out">
+                                            <i class="icon icon-sold-out"></i>
+                                            <span>sold-out</span>
+                                        </div>
+                                    </div>
+                                    <dl>
+                                        <dt>[아로마티카]</dt>
+                                        <dd class="name">아로마티카 유기농 알로에베라 젤 30ml</dd>
+                                        <dd class="price"><small><del>9,800원</del></small> 8,800원</dd>
+                                    </dl>
+                                </a>
+                                <label class="icon icon-rank7"><span class="blind">7위</span></label>       
+                                <label class="sale-label">50%</label>   
+                            </div>
+                    </li>
+                    <li class="item body" data-key="product8">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product8.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[어헤즈]</dt>
+                                    <dd class="name">어헤즈 프리미엄 히든테라피 샴푸 430ml</dd>                                        
+                                    <dd class="price"><small><del>43,000원</del></small> 23,600원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank8"><span class="blind">8위</span></label>       
+                            <label class="sale-label">45%</label>   
+                        </div>
+                    </li>
+                    <li class="item body" data-key="product20">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_body1.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[모레모]</dt>
+                                    <dd class="name">워터 트리트먼트 미라클 410ml</dd>
+                                    <dd class="price">24,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank7"><span class="blind">7위</span></label>
+                            <label class="none-label"></label>        
+                        </div>
+                    </li>
+                    <li class="item body" data-key="product21">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_body2.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[헤드스파7]</dt>
+                                    <dd class="name">트리트먼트 단독 기획(300+35ml)</dd>                                        
+                                    <dd class="price">19,700원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank8"><span class="blind">8위</span></label>
+                            <label class="none-label"></label>   
+                        </div>
+                    </li>
+                    <li class="item body" data-key="product22">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_body3.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[낫포유]</dt>
+                                    <dd class="name">낫포유 클리어 바디미스트</dd>
+                                    <dd class="price">18,900원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank7"><span class="blind">7위</span></label>  
+                            <label class="none-label"></label>   
+                        </div>
+                    </li>
+                    <li class="item body" data-key="product23">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_body4.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[궁중비책]</dt>
+                                    <dd class="name">궁중비책 샴푸&바스 350ml</dd>                                        
+                                    <dd class="price">17,600원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank8"><span class="blind">8위</span></label>
+                            <label class="none-label"></label>   
+                        </div>
+                    </li>
+                    <li class="item body" data-key="product24">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_body5.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[엘리자베스아덴]</dt>
+                                    <dd class="name">아덴 그린티 데오도란트 43g</dd>
+                                    <dd class="price"><small><del>18,000원</del></small> 9,900원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank7"><span class="blind">7위</span></label>       
+                            <label class="none-label">50%</label>   
+                        </div>
+                    </li>
+                    <li class="item body" data-key="product25">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_body6.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[어헤즈]</dt>
+                                    <dd class="name">제로톡스 두피 딥클렌징 유칼립투스 샴푸 500ML</dd>                                        
+                                    <dd class="price">16,000원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank8"><span class="blind">8위</span></label>
+                            <label class="none-label"></label>  
+                        </div>
+                    </li>
+                </ul>
+                <ul id="fragrance">
+                    <li class="item fragrance" data-key="product1">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product1.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[프라도어]</dt>
+                                    <dd class="name">프라도어 바디 오드뚜왈렛 02 100ml</dd>
+                                    <dd class="price"><small><del>50,000원</del></small> 29,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>       
+                            <label class="sale-label">41%</label>       
+                        </div>
+                    </li>
+                    <li class="item fragrance" data-key="product26">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_f1.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[랍생스]</dt>
+                                    <dd class="name">우디 오리엔탈 EDP 30ml</dd>
+                                    <dd class="price">45,600원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>
+                            <label class="none-label"></label>
+                        </div>
+                    </li>
+                    <li class="item fragrance" data-key="product27">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_f2.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[마크제이콥스]</dt>
+                                    <dd class="name">레인 EDT 100ml 기획</dd>
+                                    <dd class="price">56,000원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>
+                            <label class="none-label"></label>  
+                        </div>
+                    </li>
+                    <li class="item fragrance" data-key="product28">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_f3.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[멈칫]</dt>
+                                    <dd class="name">소프트블루솝 섬유향수 70ml</dd>
+                                    <dd class="price">7,900원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>
+                            <label class="none-label"></label>  
+                        </div>
+                    </li>
+                    <li class="item fragrance" data-key="product29">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_f4.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[버버리]</dt>
+                                    <dd class="name">브릿쉬어 EDT 50ml</dd>
+                                    <dd class="price">52,000원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>
+                            <label class="none-label"></label>  
+                        </div>
+                    </li>
+                    <li class="item fragrance" data-key="product30">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_f5.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[페라가모]</dt>
+                                    <dd class="name">인칸토 참 EDT 50ml</dd>
+                                    <dd class="price">39,000원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>       
+                            <label class="none-label"></label>       
+                        </div>
+                    </li>
+                    <li class="item fragrance" data-key="product31">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_f6.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[랍셍스]</dt>
+                                    <dd class="name">클래시 푸제르 EDP 30ml</dd>
+                                    <dd class="price">45,600원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>       
+                            <label class="none-label"></label>       
+                        </div>
+                    </li>
+                    <li class="item fragrance" data-key="product32">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_f7.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[끌로에]</dt>
+                                    <dd class="name">끌로에 EDP 50 ml</dd>
+                                    <dd class="price">79,000원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>       
+                            <label class="none-label"></label>       
+                        </div>
+                    </li>
+                </ul>
+                <ul id="man">
+                    <li class="item man" data-key="product33">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_man1.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[프라도어]</dt>
+                                    <dd class="name">프라도어 바디 오드뚜왈렛 02 100ml</dd>
+                                    <dd class="price"><small><del>50,000원</del></small> 29,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>       
+                            <label class="none-label">41%</label>       
+                        </div>
+                    </li>
+                    <li class="item man" data-key="product34">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_man2.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[프라도어]</dt>
+                                    <dd class="name">프라도어 바디 오드뚜왈렛 02 100ml</dd>
+                                    <dd class="price"><small><del>50,000원</del></small> 29,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>       
+                            <label class="sale-label">41%</label>       
+                        </div>
+                    </li>
+                    <li class="item man" data-key="product35">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_man3.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[프라도어]</dt>
+                                    <dd class="name">프라도어 바디 오드뚜왈렛 02 100ml</dd>
+                                    <dd class="price"><small><del>50,000원</del></small> 29,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>       
+                            <label class="sale-label">41%</label>       
+                        </div>
+                    </li>
+                    <li class="item man" data-key="product36">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_man4.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[프라도어]</dt>
+                                    <dd class="name">프라도어 바디 오드뚜왈렛 02 100ml</dd>
+                                    <dd class="price"><small><del>50,000원</del></small> 29,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>       
+                            <label class="sale-label">41%</label>       
+                        </div>
+                    </li>
+                    <li class="item man" data-key="product37">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_man5.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[프라도어]</dt>
+                                    <dd class="name">프라도어 바디 오드뚜왈렛 02 100ml</dd>
+                                    <dd class="price"><small><del>50,000원</del></small> 29,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>       
+                            <label class="sale-label">41%</label>       
+                        </div>
+                    </li>
+                    <li class="item man" data-key="product38">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_man6.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[프라도어]</dt>
+                                    <dd class="name">프라도어 바디 오드뚜왈렛 02 100ml</dd>
+                                    <dd class="price"><small><del>50,000원</del></small> 29,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>       
+                            <label class="sale-label">41%</label>       
+                        </div>
+                    </li>
+                    <li class="item man" data-key="product39">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_man7.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[프라도어]</dt>
+                                    <dd class="name">프라도어 바디 오드뚜왈렛 02 100ml</dd>
+                                    <dd class="price"><small><del>50,000원</del></small> 29,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>       
+                            <label class="sale-label">41%</label>       
+                        </div>
+                    </li>
+                    <li class="item man" data-key="product40">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/best_product_man8.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[프라도어]</dt>
+                                    <dd class="name">프라도어 바디 오드뚜왈렛 02 100ml</dd>
+                                    <dd class="price"><small><del>50,000원</del></small> 29,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="icon icon-rank1"><span class="blind">1위</span></label>       
+                            <label class="sale-label">41%</label>       
+                        </div>
+                    </li>
+                </ul>
+            </div>            
+            <button class="btn-more">더보기</button>            
+        </article>
+
+        <!-- 이벤트 배너 -->
+        <article class="event-banner">
+            <h3 class="blind">이벤트 배너</h3>
+            <div class="event-slide">
+                <div class="swiper-container event">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="img/event_banner1.jpg" alt="3만원 이상 4천원 즉시할인">
+                                <img src="img/event_banner1_mo.jpg" alt="3만원 이상 4천원 즉시할인">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="img/event_banner2.jpg" alt="유심침 구매하면 대박 경품 팡팡">
+                                <img src="img/event_banner2_mo.jpg" alt="유심침 구매하면 대박 경품 팡팡">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="img/event_banner3.jpg" alt="상품평 작성하고 GS&POINT 받자!">
+                                <img src="img/event_banner3_mo.jpg" alt="상품평 작성하고 GS&POINT 받자!">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        </div>
+                <!-- <ul class="slide-image">
+                    <li class="on">
+                        <a href="#">
+                            <img src="img/event_banner1.jpg" alt="3만원 이상 4천원 즉시할인">
+                            <img src="img/event_banner1_mo.jpg" alt="3만원 이상 4천원 즉시할인">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/event_banner2.jpg" alt="유심침 구매하면 대박 경품 팡팡">
+                            <img src="img/event_banner2_mo.jpg" alt="유심침 구매하면 대박 경품 팡팡">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/event_banner3.jpg" alt="상품평 작성하고 GS&POINT 받자!">
+                            <img src="img/event_banner3_mo.jpg" alt="상품평 작성하고 GS&POINT 받자!">
+                        </a>
+                    </li>
+                </ul>
+                <div class="pagination center">
+                    <a href="#" class="on"><span class="blind">1</span></a>
+                    <a href="#"><span class="blind">2</span></a>
+                    <a href="#"><span class="blind">3</span></a>
+                </div> -->
+            </div>
+        </article>
+
+        <!-- NEW -->
+        <article class="new center">
+            <h3>NEW</h3>
+            <div class="contents">                
+                <ul>
+                    <li data-key="product41">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/new_product1.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[수이사이]</dt>
+                                    <dd class="name">수이사이 뷰티 클리어 파우더 워시</dd>
+                                    <dd class="price"><small><del>21,000원</del></small> 18,900원</dd>
+                                </dl>
+                            </a>  
+                            <label class="sale-label">10%</label>       
+                        </div>
+                    </li>
+                    <li data-key="product42">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/new_product2.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[다자연]</dt>
+                                    <dd class="name">다자연 어성초 스팟 솔루션 10ml</dd>
+                                    <dd class="price"><small><del>13,000원</del></small> 8,800원</dd>
+                                </dl>
+                            </a>    
+                            <label class="sale-label">32%</label>   
+                        </div>
+                    </li>
+                    <li data-key="product43">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/new_product3.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[이솔]</dt>
+                                    <dd class="name">이솔 퍼펙트 시카 트리트먼트</dd>
+                                    <dd class="price"><small><del>19,000원</del></small> 14,300원</dd>
+                                </dl>
+                            </a>      
+                            <label class="sale-label">15%</label>
+                        </div>
+                    </li>
+                    <li data-key="product44">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/new_product4.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[잉가]</dt>
+                                    <dd class="name">INGA 타투 컨실러</dd>
+                                    <dd class="price"><small><del>10,400원</del></small> 9.900원</dd>
+                                </dl>
+                            </a>
+                            <label class="sale-label">5%</label>   
+                        </div>
+                    </li>
+                    <!-- 슬라이드 버튼 -->
+                    <li data-key="product45">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/new_product5.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[이글립스]</dt>
+                                    <dd class="name">이글립스 블러 파우더 팩트 피치에디션</dd>
+                                    <dd class="price">6,200원</dd>
+                                </dl>
+                            </a>
+                        </div>
+                    </li>
+                    <li data-key="product46">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/new_product6.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[셀리맥스]</dt>
+                                    <dd class="name">셀리맥스 프레스 블랙헤드 클렌징 오일 1+1기획</dd>                                   
+                                    <dd class="price"><small><del>31,800원</del></small> 18,900원</dd>
+                                </dl>
+                            </a>
+                            <label class="sale-label">41%</label> 
+                        </div>
+                    </li>
+                    <li data-key="product47">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/new_product7.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[아이크라운]</dt>
+                                    <dd class="name">아이크라운 하드캐리 절대카라 볼륨 킹</dd>
+                                    <dd class="price"><small><del>9,800원</del></small> 6,800원</dd>
+                                </dl>
+                            </a>
+                            <label class="sale-label">31%</label> 
+                        </div>
+                    </li>
+                    <li data-key="product48">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/new_product8.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[문샷]</dt>
+                                    <dd class="name">문샷 에어 블러셔 5g</dd>
+                                    <dd class="price"><small><del>12,000원</del></small> 10,200원</dd>
+                                </dl>
+                            </a>
+                            <label class="sale-label">10%</label> 
+                        </div>
+                    </li>
+                </ul>
+            </div>            
+            <button class="btn-more">더보기</button>
+        </article>
+
+        <!-- SALE -->
+        <article class="sale center">
+            <h3>SALE</h3>
+            <div class="contents">                
+                <ul>
+                    <li data-key="product49">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/sale_product1.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[듀이트리]</dt>
+                                    <dd class="name">듀이트리 노세범 딥 마스크 1매</dd>
+                                    <dd class="price"><small><del>3,000원</del></small> 1,500원</dd>
+                                </dl>
+                            </a>  
+                            <label class="sale-label">50%</label>       
+                        </div>
+                    </li>
+                    <li data-key="product50">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/sale_product2.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[페리페라]</dt>
+                                    <dd class="name">페리페라 컬러핏 틴트 워터젤</dd>
+                                    <dd class="price"><small><del>8,000원</del></small> 4,000원</dd>
+                                </dl>
+                            </a>    
+                            <label class="sale-label">50%</label>   
+                        </div>
+                    </li>
+                    <li data-key="product51">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/sale_product3.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[데메테르]</dt>
+                                    <dd class="name">데메테르 노크메이든 쿠션 퍼퓸 우먼</dd>
+                                    <dd class="price"><small><del>15,000원</del></small> 4,500원</dd>
+                                </dl>
+                            </a>      
+                            <label class="sale-label">70%</label>
+                        </div>
+                    </li>
+                    <li data-key="product52">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/sale_product4.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[데메테르]</dt>
+                                    <dd class="name">데메테르 무민 파파앤 마마 쿠션 퍼퓸 우먼</dd>
+                                    <dd class="price"><small><del>15,000원</del></small> 4,500원</dd>
+                                </dl>
+                            </a>
+                            <label class="sale-label">70%</label>   
+                        </div>
+                    </li>
+                    <!-- 슬라이드 버튼 -->
+                    <li data-key="product53">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/sale_product5.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[에이트루]</dt>
+                                    <dd class="name">에이트루 퓨어 밸런싱 클렌징오일 기획세트</dd>
+                                    <dd class="price"><small><del>46,000원</del></small> 20,300원</dd>
+                                </dl>
+                            </a>
+                            <label class="sale-label">56%</label> 
+                        </div>
+                    </li>
+                    <li data-key="product54">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/sale_product6.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[메디힐]</dt>
+                                    <dd class="name">메디힐 티트리 안티더스트 카밍 마스크 5+2(파마스크 2매입)</dd>
+                                    <dd class="price"><small><del>10,000원</del></small> 5,000원</dd>
+                                </dl>
+                            </a>
+                            <label class="sale-label">50%</label> 
+                        </div>
+                    </li>
+                    <li data-key="product55">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/sale_product7.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[문샷]</dt>
+                                    <dd class="name">문샷 라이트핏에어틴트 3g</dd>
+                                    <dd class="price"><small><del>14,000원</del></small> 11,900원</dd>
+                                </dl>
+                            </a>
+                            <label class="sale-label">15%</label> 
+                        </div>
+                    </li>
+                    <li data-key="product56">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/sale_product8.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[립플레저]</dt>
+                                    <dd class="name">립플레저 테일립스</dd>
+                                    <dd class="price"><small><del>9,900원</del></small> 7,900원</dd>
+                                </dl>
+                            </a>
+                            <label class="sale-label">10%</label> 
+                        </div>
+                    </li>
+                </ul>
+            </div>            
+            <button class="btn-more">더보기</button>
+        </article>
+
+        <!-- etc_banner -->
+        <article class="etc-banner center">
+            <ul>
+               <li>
+                   <a href="#"><img src="img/etc_event_banner1.jpg" alt="모바일팝 혜택이 팡팡"></a></li>
+               <li><a href="#"><img src="img/etc_event_banner2.jpg" alt="MD's Choice"></a></li>
+               <li><a href="#"><img src="img/etc_event_banner3.jpg" alt="여름필수템 SALE!"></a></li>
+            </ul>
+        </article>          
+        
+        <!-- ONLY lalavla -->
+        <article class="only">
+            <h3><i class="icon icon-heart-big"></i>Only lalalvla<i class="icon icon-heart-big"></i></h3>
+            <div class="contents center">                
+                <ul>
+                    <li data-key="product57">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/only_product1.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[더랩바이블랑두]</dt>
+                                    <dd class="name">더랩바이블랑두 올리고히알루론산 5000 토너</dd>
+                                    <dd class="price"><small><del>21,000원</del></small> 12,600원</dd>
+                                </dl>
+                            </a>  
+                            <label class="sale-label">50%</label>
+                            <label class="only"><i class="icon icon-only"></i></label>     
+                        </div>
+                    </li>
+                    <li data-key="product58">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/only_product2.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[레이티드그린]</dt>
+                                    <dd class="name">레이티드그린 리얼시어프로틴 트리트먼트 200ml</dd>
+                                    <dd class="price"><small><del>22,000원</del></small> 9,900원</dd>
+                                </dl>
+                            </a>    
+                            <label class="sale-label">55%</label> 
+                            <label class="only"><i class="icon icon-only"></i></label> 
+                        </div>
+                    </li>
+                    <li data-key="product59">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/only_product3.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[라운드랩]</dt>
+                                    <dd class="name">라운드랩 해풍 쑥 진정 크림 80ml</dd>
+                                    <dd class="price"><small><del>32,000원</del></small> 19,200원</dd>
+                                </dl>
+                            </a>      
+                            <label class="sale-label">40%</label>
+                            <label class="only"><i class="icon icon-only"></i></label>
+                        </div>
+                    </li>
+                    <li data-key="product60">
+                        <div class="wrap">
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="img/only_product4.jpg" alt="">
+                                    <div class="hover">
+                                        <button class="icon icon-hover-cart"></button>
+                                        <button class="icon icon-hover-like"></button>
+                                        <div>
+                                            <i class="icon icon-review"></i>
+                                            <span class="count">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="sold-out">
+                                        <i class="icon icon-sold-out"></i>
+                                        <span>sold-out</span>
+                                    </div>
+                                </div>
+                                <dl>
+                                    <dt>[마몽드]</dt>
+                                    <dd class="name">마몽드 무궁화 크림 에디션 50ml</dd>
+                                    <dd class="price"><small><del>29,000원</del></small> 20,900원</dd>
+                                </dl>
+                            </a>
+                            <label class="sale-label">30%</label>
+                            <label class="only"><i class="icon icon-only"></i></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>            
+            <button class="btn-more">더보기</button>
+        </article>
+
+        <article class="service center">
+            <div class="left">
+                <!-- 공지사항 -->
+                <div class="notice">           
+                    <h2><i class="icon icon-notice"></i>공지사항</h2>
+                    <table>
+                        <tr>
+                            <td>[공지]</td>
+                            <td><a href="#">19년 5월 시스템 점검 작업 안내</a></td>
+                            <td>2019.04.29</td>
+                        </tr>
+                        <tr>
+                            <td>[공지]</td>
+                            <td><a href="#">개인정보처리방침 주요 개정사항</a></td>
+                            <td>2019.04.23</td>
+                        </tr>
+                        <tr>
+                            <td>[소식]</td>
+                            <td><a href="#">포근한 봄, 랄라블라에서 다양한 뷰티를 만나보세요!</a></td>
+                            <td>2019.04.19</td>
+                        </tr>
+                        <tr>
+                            <td>[공지]</td>
+                            <td><a href="#">19년 4월 시스템 점검 작업 안내</a></td>
+                            <td>2019.03.27</td>
+                        </tr>
+                        <tr>
+                            <td>[소식]</td>
+                            <td><a href="#">랄라블라, '나만의 제품' 찾는 사람 늘어난다!</a></td>
+                            <td>2019.03.14</td>
+                        </tr>
+                    </table>
+                    <button class="icon icon-plus"></button>
+                </div>
+                <!-- 고객센터 -->
+                <div class="cs-center">
+                    <ul>
+                        <i class="icon icon-cs-service"></i>
+                        <li>고객센터</li>
+                        <li>1388-3426</li>
+                        <li>영업시간 09:00-18:00</li>
+                    </ul>
+                    <div class="btn-group">
+                        <button>1:1 문의</button>
+                        <button>FAQ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <!-- 매장찾기 -->
+                <div class="map">
+                    <h2><i class="icon icon-map"></i>매장찾기</h2>
+                    <form action="#" class="search">
+                        <label for="search" class="blind">매장검색</label>
+                        <input type="text" id="search" placeholder="지역을 입력하세요.">
+                        <button type="submit"><i class="icon icon-search"></i></button>
+                    </form>
+                    <!-- 지도 -->
+                    <div id="map" style="height:350px;"></div>
+                    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=2c24799a1f5a3b5ba05b6900a739fe79"></script>
+                    <script>
+                        window.onload=function(){
+                       
+                        var mapContainer = document.getElementById('map'),
+                            mapOption = { 
+                                center: new kakao.maps.LatLng(37.558262, 126.937061),
+                                level: 3
+                            };
+
+                        var map = new kakao.maps.Map(mapContainer, mapOption);
+                        
+                        // 마커를 표시할 위치입니다 
+                        var position =  new kakao.maps.LatLng(37.558262, 126.937061);
+
+                        // 마커를 생성합니다
+                        var marker = new kakao.maps.Marker({
+                            position: position,
+                            clickable: true
+                        });
+
+                        marker.setMap(map);
+                        
+                        var iwContent = '<div style="padding:3px;">랄라블라 신촌대로점</div>', 
+                            iwRemoveable = true;
+
+                        var infowindow = new kakao.maps.InfoWindow({
+                            content : iwContent,
+                            removable : iwRemoveable
+                        });
+
+                        kakao.maps.event.addListener(marker, 'click', function() {
+                            infowindow.open(map, marker);  
+                        });
+                    }
+                    </script>
+                </div>
+            </div>
+        </article>                 
+    </section>
+    <!-- /section -->
+
+    <!-- footer -->
+    <footer>
+        <div class="footer center">
+            <div class="mobile">
+                <a href="#">랄라블라소개</a>
+                <a href="#">pc버전보기</a>
+                <a href="#">매장안내</a>
+            </div>
+            <ul>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">GS리테일멤버쉽(GS&point) 회원약관</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+                <li><a href="#">오시는길</a></li>
+                <li><a href="#">정도경영/파트너사목소리</a></li>
+            </ul>
+            <div class="box">
+                <address>
+                    <span>주소 : 서울시 강남구 논현로 508(역삼동 679번지 GS타워)</span>
+                    <span>대표이사 : 허연수</span>
+                    <span>사업자등록번호 116-81-18745</span>
+                    <span>랄라블라 고객센터 : 1833-3426</span>          
+                </address>
+            </div> 
+            <div class="sns">
+                <a href="https://www.youtube.com/channel/UCd6AtuNs0M6_VRaclLUQD3Q"><i class="icon icon-sns-youtube"></i></a>
+                <a href="https://www.instagram.com/lalavla.official/"><i class="icon icon-sns-instagram"></i></a>
+                <a href="https://www.facebook.com/lalavla.official/"><i class="icon icon-sns-facebook"></i></a>
+                <a href="#"><i class="icon icon-sns-twitter"></i></a>
+            </div>
+            
+            <div class="select-wrap drop-up right" id="test1">
+                <button>family site <i class="icon icon-up"></i></button>
+                <ul>
+                    <li><a href="http://www.gsretail.com/gsretail/ko/main" target="_blank">GS 리테일</a></li>
+                    <li><a href="http://gs25.gsretail.com/gscvs/ko/main" target="_blank">GS 25</a></li>
+                    <li><a href="http://gssuper.gsretail.com/gssuper/ko/main" target="_blank">GS 슈퍼마켓</a></li>                
+                    <li><a href="http://www.gsfresh.com/eretail.main.dev?retRef=Y&source=http://gssuper.gsretail.com/gssuper/ko/main" target="_blank">GS Fresh</a></li>                
+                    <li><a href="http://www.popcard.co.kr/popcard/ko/main" target="_blank">POP카드</a></li>                
+                </ul>
+            </div>
+            <small>Copyright 2015 GSRetail. Co. Ltd., All Right Reserved.</small>
+        </div>
+    </footer>
+    <!-- /footer -->
+
+    <!-- 오픈 팝업 -->    
+    <div class="popup-open">
+        <h2>오픈 팝업</h2>
+        <i class="icon icon-close"></i>
+        <p>랄라블라 앱 다운받으시고 <br>다양한 혜택 받으세요!</p>
+        <div class="wrap">
+            <i class="icon icon-heart"></i>
+            <a href="#" class="play-store">google 플레이스토어 바로가기</a>
+            <i class="icon icon-heart"></i>
+            <a href="#" class="mobile-view">모바일 웹으로 볼래요</a>
+        </div>
+    </div>
+
+
+    <!-- 로그인 팝업 -->
+    <div class="popup-login">
+        <h2 class="blind">로그인 팝업</h2>
+        <div class="login-delete">
+            <i class="icon icon-del-middle pc"></i>
+            <i class="icon icon-del-big mobile"></i>
+        </div>
+        <form action="#" class="box">
+            <div class="row">
+                <i class="icon icon-login"></i>
+                <input type="text">
+            </div>
+            <div class="row">
+                <i class="icon icon-pw"></i>
+                <input type="password">
+            </div>
+            <button type="submit">Log In</button>
+        </form>  
+        <div class="link-group">
+            <ul>
+                <li><a href="#">아이디찾기</a></li>
+                <li><a href="#">비밀번호찾기</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </div>              
+        <div class="sns-login">
+            <h3><i class="icon icon-heart-xs"></i>SNS 로그인<i class="icon icon-heart-xs"></i></h3>
+            <ul class="pc">
+                <li>
+                    <a href="#"><i class="icon icon-kakao"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="icon icon-google"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="icon icon-naver"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="icon icon-facebook"></i></a>
+                </li>
+            </ul>
+            <div class="mobile">
+                <div class="naver">
+                    <a href="#">
+                        <i class="icon icon-naver"></i>
+                        <p>네이버 아이디로 로그인</p>
+                    </a>
+                </div>
+                <div class="kakao">
+                    <a href="#">
+                        <i class="icon icon-kakao"></i>
+                        <p>카카오 아이디로 로그인</p>
+                       </a>
+                </div>
+                <div class="google">
+                    <a href="#">
+                        <i class="icon icon-google"></i>
+                        <p>구글 아이디로 로그인</p>
+                    </a>
+                </div>
+                <div class="facebook">
+                    <a href="#">
+                        <i class="icon icon-facebook"></i>
+                        <p>페이스북 아이디로 로그인</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 마이페이지 팝업 -->
+    <div class="popup-mypage">
+        <h2 class="blind">마이페이지 팝업</h2>
+        <div class="mypage-delete">
+            <i class="icon icon-del-middle pc"></i>
+            <i class="icon icon-del-big mobile"></i>
+        </div>
+        <div class="box">
+            <i class="icon icon-heart-small"></i>
+            <ul>
+                <li><a href="#">회원정보</a></li>
+                <li><a href="#">주문내역</a></li>
+                <li><a href="#">장바구니/찜</a></li>
+                <li><a href="#">취소/교환</a></li>
+                <li><a href="#">멤버쉽 조회</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li class="logout"><a href="#">로그아웃</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
