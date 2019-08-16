@@ -661,4 +661,36 @@ $(function(){
             $('.footer li').show();
         }
     }).resize()
+
+    //map
+    var mapContainer = document.getElementById('map'),
+        mapOption = { 
+            center: new kakao.maps.LatLng(37.558262, 126.937061),
+            level: 3
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+    
+    // 마커를 표시할 위치입니다 
+    var position =  new kakao.maps.LatLng(37.558262, 126.937061);
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: position,
+        clickable: true
+    });
+
+    marker.setMap(map);
+    
+    var iwContent = '<div style="padding:3px;">랄라블라 신촌대로점</div>', 
+        iwRemoveable = true;
+
+    var infowindow = new kakao.maps.InfoWindow({
+        content : iwContent,
+        removable : iwRemoveable
+    });
+
+    kakao.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map, marker);  
+    });
 })
