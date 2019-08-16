@@ -200,39 +200,49 @@ $(function(){
     // 모바일 스와이프
     var tabSwiper;
     function swiperInit(){
-            // 네비게이션 탭메뉴 스와이프
-            tabSwiper= new Swiper('.gnb', {
-                slidesPerView: 3,
-                spaceBetween: 10,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                    },
-            });
-            // best 탭메뉴 스와이프 
-            bestTabSwiper= new Swiper('.tab-menu', {
-                slidesPerView: 3,
-                spaceBetween: 20,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                    },
-            });
-        }
+        // 네비게이션 탭메뉴 스와이프
+        tabSwiper= new Swiper('.gnb', {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            pagination: {
+                el: '.gnb .swiper-pagination',
+                clickable: true,
+                },
+        });
+        // best 탭메뉴 스와이프 
+        bestTabSwiper= new Swiper('.tab-menu', {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            pagination: {
+                el: '.tab-menu .swiper-pagination',
+                clickable: true,
+                },
+        });
+    }
         $(window).resize(function(){                
             if($(window).width()<=767){
                 if(tabSwiper==undefined){
                     swiperInit();              
+                    console.log('최초생성');
                 }else{
                     tabSwiper.update();
+                    bestTabSwiper.update();
+                    console.log('swiper update');
                 } 
                 if(tabSwiper.destroyed){
                     swiperInit();
+                    console.log('다시 객체생성');
                 }                    
             }else{
+                console.log('pc');
                 
-                if(tabSwiper!=undefined){tabSwiper.destroy();}                                   
+                if(tabSwiper!=undefined){
+                    tabSwiper.destroy();
+                    bestTabSwiper.destroy();
+                    console.log('객체생성파괴');
+                }                                   
             }
+            
         }).resize();
 
     //토글메뉴버튼---------------------------------------------
@@ -251,14 +261,12 @@ $(function(){
         else if($(window).width()>767){
             $('.top-area .menu-btn').addClass('pc')
             $('.top-area .menu-btn').removeClass('mo')
-            $('.depth1 a').click(function(e){
-                e.preventDefault();
-                $('.sub').removeClass('active');
-                $(this).next().addClass('active');
-            })        
+            // $('.depth1 a').click(function(){
+            //     $('.sub').removeClass('active');
+            //     $(this).next().addClass('active');
+            // })        
             //pc용
-            $('.menu-btn.pc').click(function(e){
-                e.preventDefault()
+            $('.menu-btn.pc').click(function(){
                 $('.menu-pc').show();//피시 메뉴
                 $('.menu-pc .depth1').toggleClass('active');
                 $('.menu-popup').hide();//모바일 팝업
@@ -266,10 +274,7 @@ $(function(){
         }
         
     }).resize()    
-    
-    
-    
-    
+   
     
     $('.menu-popup .depth1 .title').click(function(){
         if($(this).hasClass('active')){
@@ -282,11 +287,6 @@ $(function(){
             $(this).next().slideDown();
         }
     })
-    
-
-    
-
-
     
     //모바일 메뉴팝업 높이구하기
     if($(window).width()<=767){
@@ -324,19 +324,17 @@ $(function(){
 
     var swiper = new Swiper('.slide', {
         pagination: {
-            el: '.swiper-pagination',
+            el: '.slide .swiper-pagination',
             clickable:true,
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.slide .swiper-button-next',
+            prevEl: '.slide .swiper-button-prev',
         },
-        
         autoplay: {
             delay: 2500,
             disableOnInteraction: true,
         },
-
         on:{//사용자가 슬라이드 화면을 터치형식으로 넘길때 재생아이콘으로 변경
             sliderMove:function(){
                 $('#playStop i').removeClass('icon-stop').addClass('icon-play');
@@ -373,7 +371,7 @@ $(function(){
     //이벤트
     var eventSwiper = new Swiper('.event', {
         pagination: {
-          el: '.swiper-pagination',
+          el: '.event .swiper-pagination',
           
         },
         autoplay: {
@@ -663,36 +661,4 @@ $(function(){
             $('.footer li').show();
         }
     }).resize()
-
-    //map
-    var mapContainer = document.getElementById('map'),
-        mapOption = { 
-            center: new kakao.maps.LatLng(37.558262, 126.937061),
-            level: 3
-        };
-
-    var map = new kakao.maps.Map(mapContainer, mapOption);
-    
-    // 마커를 표시할 위치입니다 
-    var position =  new kakao.maps.LatLng(37.558262, 126.937061);
-
-    // 마커를 생성합니다
-    var marker = new kakao.maps.Marker({
-        position: position,
-        clickable: true
-    });
-
-    marker.setMap(map);
-    
-    var iwContent = '<div style="padding:3px;">랄라블라 신촌대로점</div>', 
-        iwRemoveable = true;
-
-    var infowindow = new kakao.maps.InfoWindow({
-        content : iwContent,
-        removable : iwRemoveable
-    });
-
-    kakao.maps.event.addListener(marker, 'click', function() {
-        infowindow.open(map, marker);  
-    });
 })
