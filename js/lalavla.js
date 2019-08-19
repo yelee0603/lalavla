@@ -261,10 +261,10 @@ $(function(){
         else if($(window).width()>767){
             $('.top-area .menu-btn').addClass('pc')
             $('.top-area .menu-btn').removeClass('mo')
-            // $('.depth1 a').click(function(){
-            //     $('.sub').removeClass('active');
-            //     $(this).next().addClass('active');
-            // })        
+            $('.depth1 a').click(function(){
+                $('.sub').removeClass('active');
+                $(this).next().addClass('active');
+            })        
             //pc용
             $('.menu-btn.pc').click(function(){
                 $('.menu-pc').show();//피시 메뉴
@@ -276,16 +276,18 @@ $(function(){
     }).resize()    
    
     
-    $('.menu-popup .depth1 .title').click(function(){
+    // 메뉴 아이콘 바꾸기
+    $('.menu-popup .depth1 .title').click(function(e){
         if($(this).hasClass('active')){
             $(this).removeClass('active');
             $(this).next().slideUp();
         }else{
-            $('.menu-popup .depth1 a').removeClass();
+            $('.menu-popup .depth1 .title').removeClass('active');
             $('.depth1 .sub').slideUp();
             $(this).addClass('active');
             $(this).next().slideDown();
         }
+        e.preventDefault();
     })
     
     //모바일 메뉴팝업 높이구하기
@@ -384,9 +386,9 @@ $(function(){
     // 퀵메뉴 스크롤 따라다니기
     var scrollTop;
     $(window).scroll(function(){        
-        scrollTop = $(document).scrollTop()+100;
-        if (scrollTop < 1100) {
-            scrollTop = 1100;
+        scrollTop = $(document).scrollTop()+200;
+        if (scrollTop < 880) {
+            scrollTop = 880;
         }    
         if($(window).width()>767){                                
             $(".quick-menu").stop().animate( { "top" : scrollTop },500);    
