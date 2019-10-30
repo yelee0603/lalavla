@@ -374,7 +374,7 @@ $(function(){
     var eventSwiper = new Swiper('.event', {
         pagination: {
           el: '.event .swiper-pagination',
-          
+          clickable:true,
         },
         autoplay: {
             delay: 3500,
