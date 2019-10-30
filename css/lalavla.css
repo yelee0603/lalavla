@@ -8,7 +8,7 @@ li{list-style: none;}
 button{background: none; border: none;}
 .blind{font-size: 0; position: absolute; left: -9999px;}
 .center{max-width: 1200px; margin: auto; position: relative;}
-body{font-family: 'Nanum Gothic', sans-serif;}
+body{font-family: 'Nanum Gothic', sans-serif; min-width:1100px;}
 
 /* sprite image */
 .icon{background-image: url(../img/sprite.png); display: inline-block;}
